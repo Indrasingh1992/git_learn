@@ -1,0 +1,8 @@
+# Line 1: Stash → Pull → Pop → Status check
+git stash push -m "local changes" && git pull origin main && git stash pop && git status
+
+
+
+# If git status shows conflicts → EDIT FILES FIRST, THEN:
+# Line 2: Add → Drop → Commit → Push  
+git add . && git stash drop && git commit -m "merged changes" && git push origin main
